@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="594.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.ManageRepairRequestController">
+   <children>
+      <Label layoutX="187.0" layoutY="14.0" prefHeight="30.0" prefWidth="207.0" text="Manage Repair Request">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5486935866983373" endY="0.9049881235154394" startX="0.5605700712589073" startY="0.42755344418052255">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2947368323802948" green="0.07017543911933899" blue="0.6315789222717285" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.42129629850387573" green="0.7781635522842407" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="9.0" layoutY="60.0" text="RequestID:" />
+      <Label layoutX="27.0" layoutY="88.0" text="Location:" />
+      <Label layoutX="320.0" layoutY="58.0" text="Status:" />
+      <Label layoutX="291.0" layoutY="88.0" text="RequestDate:" />
+      <Label layoutX="39.0" layoutY="121.0" text="Type:" />
+      <TextField fx:id="updaterequestIdTextField" layoutX="92.0" layoutY="379.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="locationTextField" layoutX="82.0" layoutY="84.0" />
+      <ComboBox fx:id="typeComboBox" layoutX="82.0" layoutY="117.0" prefHeight="26.0" prefWidth="160.0" />
+      <ComboBox fx:id="statusComboBox" layoutX="365.0" layoutY="55.0" prefWidth="150.0" />
+      <DatePicker fx:id="requestDateDatePicker" layoutX="365.0" layoutY="84.0" prefHeight="26.0" prefWidth="150.0" />
+      <TableView fx:id="outputTableView" layoutX="14.0" layoutY="171.0" prefHeight="200.0" prefWidth="581.0">
+         <columns>
+            <TableColumn fx:id="RequestIdTC" prefWidth="63.0" text="RequestID" />
+            <TableColumn fx:id="locationTC" prefWidth="74.0" text="Location" />
+            <TableColumn fx:id="typeTC" prefWidth="87.0" text="Type" />
+            <TableColumn fx:id="statusTC" prefWidth="95.0" text="Status" />
+            <TableColumn fx:id="requestDateTC" prefWidth="111.0" text="RequestDate" />
+            <TableColumn fx:id="emergencyTC" prefWidth="147.0" text="Emergency" />
+         </columns>
+      </TableView>
+      <Button layoutX="545.0" layoutY="139.0" mnemonicParsing="false" onAction="#addRequestButtonOnAction" text="Add" />
+      <Button layoutX="293.0" layoutY="379.0" mnemonicParsing="false" onAction="#updateStatusButtonOnAction" text="update Status" />
+      <Button layoutX="394.0" layoutY="379.0" mnemonicParsing="false" onAction="#deleteRequestButtonOnAction" text="Delete Request" />
+      <Label layoutX="24.0" layoutY="384.0" text="RequestID:" />
+      <TextField fx:id="requestIdTextField" layoutX="82.0" layoutY="55.0" prefHeight="26.0" prefWidth="160.0" />
+      <ComboBox fx:id="emergencyComboBox" layoutX="369.0" layoutY="117.0" prefWidth="150.0" />
+      <Label layoutX="291.0" layoutY="121.0" text="Emergency" />
+      <Button layoutX="32.0" layoutY="16.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: lightBlue;" text="Back" />
+      <Label layoutX="38.0" layoutY="430.0" text="Status:" />
+      <Label layoutX="17.0" layoutY="474.0" text="Emergency:" />
+      <ComboBox fx:id="updatestatusComboBox" layoutX="92.0" layoutY="426.0" prefHeight="26.0" prefWidth="186.0" />
+      <ComboBox fx:id="updateemergencyComboBox" layoutX="92.0" layoutY="470.0" prefHeight="26.0" prefWidth="186.0" />
+   </children>
+</AnchorPane>
