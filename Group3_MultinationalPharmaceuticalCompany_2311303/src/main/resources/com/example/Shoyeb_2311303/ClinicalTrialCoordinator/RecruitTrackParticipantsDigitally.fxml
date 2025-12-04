@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Shoyeb_2311303.ClinicalTrialCoordinator.RecruitTrackParticipantsDigitallyController"
+            prefHeight="500.0" prefWidth="700.0">
+
+    <!-- Login Section -->
+    <VBox spacing="10" layoutX="20" layoutY="20">
+        <Label text="Participant Management Module Login" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+        <HBox spacing="10">
+            <Label text="User ID:"/>
+            <TextField fx:id="userIdField" promptText="Enter UID"/>
+            <Button text="Login" fx:id="loginButton"/>
+        </HBox>
+    </VBox>
+
+    <!-- Participant List Section -->
+    <VBox spacing="10" layoutX="20" layoutY="100">
+        <Label text="Participant List" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+        <TableView fx:id="participantTable" prefWidth="650" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="idColumn" text="Participant ID" prefWidth="100"/>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
+                <TableColumn fx:id="statusColumn" text="Status" prefWidth="150"/>
+                <TableColumn fx:id="eligibilityColumn" text="Eligibility" prefWidth="150"/>
+                <TableColumn fx:id="consentColumn" text="Consent Form" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Update & Confirm Section -->
+    <VBox spacing="10" layoutX="20" layoutY="320">
+        <Label text="Update Participant Records / Confirm Enrollment" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+        <HBox spacing="10">
+            <Button text="Update Eligibility" fx:id="updateEligibilityButton"/>
+            <Button text="Update Consent Form" fx:id="updateConsentButton"/>
+            <Button text="Confirm Enrollment" fx:id="confirmEnrollmentButton"/>
+        </HBox>
+        <TextArea fx:id="notificationArea" promptText="System notifications will appear here..." prefHeight="60" prefWidth="650"/>
+    </VBox>
+
+</AnchorPane>

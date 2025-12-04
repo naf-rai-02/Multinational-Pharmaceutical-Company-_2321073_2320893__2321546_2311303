@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Shoyeb_2311303.ClinicalTrialCoordinator.CoordinateCommunicationAmongTeamsController"
+            prefWidth="600" prefHeight="400">
+
+    <VBox fx:id="mainVBox" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0"
+          AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0" spacing="10">
+
+        <!-- Padding for VBox -->
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+
+        <!-- Event 1: Access CTMS Communication Hub -->
+        <HBox spacing="10">
+            <Label text="Event 1:"/>
+            <Button text="Access CTMS Communication Hub" fx:id="accessHubButton"/>
+            <Label text="UID:"/>
+            <TextField fx:id="uidField" promptText="Enter UID"/>
+        </HBox>
+
+        <!-- Event 2: Reviews tasks, messages, approvals -->
+        <VBox spacing="5">
+            <Label text="Event 2: Review Tasks, Messages, Pending Approvals"/>
+            <TextArea fx:id="reviewArea" promptText="Task lists, messages, pending approvals..." prefHeight="80"/>
+        </VBox>
+
+        <!-- Event 3: Create announcements, meetings, assign tasks -->
+        <VBox spacing="5">
+            <Label text="Event 3: Create Announcements / Meetings / Assign Tasks"/>
+            <HBox spacing="10">
+                <Button text="Create Announcement" fx:id="announcementButton"/>
+                <Button text="Schedule Meeting" fx:id="meetingButton"/>
+                <Button text="Assign Task" fx:id="assignTaskButton"/>
+            </HBox>
+        </VBox>
+
+        <!-- Event 4: System notification -->
+        <VBox spacing="5">
+            <Label text="Event 4: System Notifications"/>
+            <TextArea fx:id="notificationArea" promptText="Notifications to team members..." prefHeight="80" editable="false"/>
+        </VBox>
+
+    </VBox>
+</AnchorPane>

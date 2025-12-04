@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Shoyeb_2311303.MaintainDistributorRecordsController"
+            prefWidth="600.0" prefHeight="400.0">
+
+    <!-- Title Label -->
+    <Label text="Maintain Supplier  Distributor Records"
+           layoutX="120" layoutY="10"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- User ID Input -->
+    <Label text="User ID:" layoutX="50" layoutY="50" />
+    <TextField fx:id="userIdField" layoutX="150" layoutY="45" prefWidth="200"/>
+
+    <!-- Company Type Selection -->
+    <Label text="Company Type:" layoutX="50" layoutY="90" />
+    <ComboBox fx:id="companyTypeComboBox" layoutX="150" layoutY="85" prefWidth="200">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Supplier"/>
+                <String fx:value="Distributor"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- Contact Details -->
+    <Label text="Contact Details:" layoutX="50" layoutY="130" />
+    <TextField fx:id="contactDetailsField" layoutX="150" layoutY="125" prefWidth="200"/>
+
+    <!-- Contract Terms -->
+    <Label text="Contract Terms:" layoutX="50" layoutY="170" />
+    <TextField fx:id="contractTermsField" layoutX="150" layoutY="165" prefWidth="200"/>
+
+    <!-- Certifications -->
+    <Label text="Certifications:" layoutX="50" layoutY="210" />
+    <TextField fx:id="certificationsField" layoutX="150" layoutY="205" prefWidth="200"/>
+
+    <!-- Performance Ratings -->
+    <Label text="Performance Ratings:" layoutX="50" layoutY="250" />
+    <TextField fx:id="performanceField" layoutX="150" layoutY="245" prefWidth="200"/>
+
+    <!-- Buttons for Operations -->
+    <Button text="Update Details" fx:id="updateBtn" layoutX="50" layoutY="300" prefWidth="120"/>
+    <Button text="Archive Profile" fx:id="archiveBtn" layoutX="190" layoutY="300" prefWidth="120"/>
+    <Button text="Approve Profile" fx:id="approveBtn" layoutX="330" layoutY="300" prefWidth="120"/>
+
+    <!-- Event Logs Area -->
+    <Label text="Event Logs:" layoutX="50" layoutY="340" />
+    <TextArea fx:id="eventLogsArea" layoutX="150" layoutY="335" prefWidth="380" prefHeight="50" editable="false"/>
+
+</AnchorPane>

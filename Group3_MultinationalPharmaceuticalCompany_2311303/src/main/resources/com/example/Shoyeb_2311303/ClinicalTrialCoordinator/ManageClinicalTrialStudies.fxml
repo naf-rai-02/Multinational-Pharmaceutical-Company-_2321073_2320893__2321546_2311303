@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Shoyeb_2311303.ClinicalTrialCoordinator.ManageClinicalTrialStudiesController"
+            prefHeight="500.0" prefWidth="800.0">
+
+    <!-- Header -->
+    <Label text="Clinical Trial Management System"
+           layoutX="20.0" layoutY="10.0"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <!-- Trial Dashboard Tabs -->
+    <TabPane layoutX="20.0" layoutY="50.0" prefWidth="760.0" prefHeight="300.0">
+        <tabs>
+            <Tab text="Planned Studies">
+                <AnchorPane>
+                    <TableView fx:id="plannedTrialsTable" layoutX="10.0" layoutY="10.0" prefWidth="730.0" prefHeight="250.0">
+                        <columns>
+                            <TableColumn text="Protocol ID" fx:id="protocolColumn"/>
+                            <TableColumn text="Phase" fx:id="phaseColumn"/>
+                            <TableColumn text="Site Locations" fx:id="siteColumn"/>
+                            <TableColumn text="Status" fx:id="statusColumn"/>
+                        </columns>
+                    </TableView>
+                </AnchorPane>
+            </Tab>
+            <Tab text="Active Studies">
+                <AnchorPane>
+                    <TableView fx:id="activeTrialsTable" layoutX="10.0" layoutY="10.0" prefWidth="730.0" prefHeight="250.0">
+                        <columns>
+                            <TableColumn text="Protocol ID" fx:id="activeProtocolColumn"/>
+                            <TableColumn text="Phase" fx:id="activePhaseColumn"/>
+                            <TableColumn text="Site Locations" fx:id="activeSiteColumn"/>
+                            <TableColumn text="Status" fx:id="activeStatusColumn"/>
+                        </columns>
+                    </TableView>
+                </AnchorPane>
+            </Tab>
+            <Tab text="Completed Studies">
+                <AnchorPane>
+                    <TableView fx:id="completedTrialsTable" layoutX="10.0" layoutY="10.0" prefWidth="730.0" prefHeight="250.0">
+                        <columns>
+                            <TableColumn text="Protocol ID" fx:id="completedProtocolColumn"/>
+                            <TableColumn text="Phase" fx:id="completedPhaseColumn"/>
+                            <TableColumn text="Site Locations" fx:id="completedSiteColumn"/>
+                            <TableColumn text="Status" fx:id="completedStatusColumn"/>
+                        </columns>
+                    </TableView>
+                </AnchorPane>
+            </Tab>
+        </tabs>
+    </TabPane>
+
+    <!-- Add / Update Trial Info -->
+    <VBox layoutX="20.0" layoutY="370.0" spacing="10">
+        <HBox spacing="10">
+            <Label text="Protocol ID:"/>
+            <TextField fx:id="protocolField" prefWidth="150"/>
+            <Label text="Phase:"/>
+            <TextField fx:id="phaseField" prefWidth="100"/>
+            <Label text="Site Locations:"/>
+            <TextField fx:id="siteField" prefWidth="200"/>
+        </HBox>
+
+        <Button fx:id="saveBtn" text="Save Changes" prefWidth="120"/>
+    </VBox>
+
+    <!-- Notifications -->
+    <TextArea fx:id="notificationArea" layoutX="20.0" layoutY="450.0" prefWidth="760.0" prefHeight="50.0"
+              editable="false" promptText="System notifications will appear here..."/>
+</AnchorPane>

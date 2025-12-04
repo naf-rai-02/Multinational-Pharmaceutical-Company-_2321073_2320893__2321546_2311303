@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Shoyeb_2311303.ClinicalTrialCoordinator.HandleSiteManagementDigitallyController"
+            prefWidth="800.0" prefHeight="600.0">
+
+    <!-- Main VBox for vertical layout -->
+    <VBox spacing="15" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+
+        <!-- User ID input and Enter Module button -->
+        <HBox spacing="10">
+            <Label text="User ID:"/>
+            <TextField fx:id="uidField" promptText="Enter UID" />
+            <Button fx:id="enterModuleButton" text="Enter Module"/>
+        </HBox>
+
+        <!-- Site Status Section -->
+        <VBox spacing="5">
+            <Label text="Site Status"/>
+            <HBox spacing="10">
+                <ComboBox fx:id="siteStatusComboBox" prefWidth="150"/>
+                <Button fx:id="viewStatusButton" text="View Status"/>
+            </HBox>
+        </VBox>
+
+        <!-- Site Documents & Staff Management -->
+        <VBox spacing="5">
+            <Label text="Manage Site Documents  Staff"/>
+            <HBox spacing="10">
+                <Button fx:id="updateDocumentsButton" text="Update Documents"/>
+                <Button fx:id="trackVisitsButton" text="Track Visits"/>
+                <Button fx:id="monitorTrainingButton" text="Monitor Training"/>
+            </HBox>
+        </VBox>
+
+        <!-- Automated Reminders -->
+        <HBox spacing="10">
+            <Button fx:id="sendRemindersButton" text="Send Reminders/Alerts"/>
+        </HBox>
+
+        <!-- Status/Output Area -->
+        <TextArea fx:id="statusArea" prefHeight="250" wrapText="true" promptText="Module output will appear here..."/>
+    </VBox>
+
+</AnchorPane>

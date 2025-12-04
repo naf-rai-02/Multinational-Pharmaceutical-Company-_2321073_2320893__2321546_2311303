@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Shoyeb_2311303.CollaborateProcurementProduction_QAController"
+            prefHeight="500.0" prefWidth="700.0">
+
+    <!-- Title -->
+    <Label layoutX="20" layoutY="20" text="Collaborate Procurement Production QA" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- Event 1: Access Cross-Department Platform -->
+    <Button fx:id="accessPlatformBtn" layoutX="20" layoutY="60" text="Access Collaboration Platform" prefWidth="200" />
+
+    <!-- Event 2: Open Shared Tasks -->
+    <Label layoutX="20" layoutY="110" text="Shared Tasks / Communication Threads:" />
+    <ListView fx:id="tasksListView" layoutX="20" layoutY="130" prefWidth="300" prefHeight="120" />
+
+    <!-- Event 3: Upload Documents / Add Comments / Post Updates -->
+    <Label layoutX="350" layoutY="110" text="Update / Comments / Upload:" />
+    <TextArea fx:id="updateTextArea" layoutX="350" layoutY="130" prefWidth="300" prefHeight="120" promptText="Write update or comment..." />
+    <Button fx:id="uploadBtn" layoutX="350" layoutY="260" text="Upload / Post Update" prefWidth="150" />
+
+    <!-- Event 4: Close / Archive Tasks -->
+    <Label layoutX="20" layoutY="270" text="Manage Tasks:" />
+    <Button fx:id="closeTaskBtn" layoutX="20" layoutY="290" text="Close / Archive Selected Task" prefWidth="200" />
+
+    <!-- Status Area -->
+    <Label layoutX="20" layoutY="350" text="Status / Logs:" />
+    <TextArea fx:id="statusArea" layoutX="20" layoutY="370" prefWidth="630" prefHeight="100" editable="false" />
+
+</AnchorPane>

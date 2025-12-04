@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Shoyeb_2311303.TrackShipmentLogisticsStatusController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Title -->
+    <Label text="Track Shipment Logistics Status"
+           layoutX="180" layoutY="10"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <!-- Shipment ID Input -->
+    <Label text="Shipment ID:" layoutX="50" layoutY="50"/>
+    <TextField fx:id="shipmentIdField" layoutX="150" layoutY="45" prefWidth="200"/>
+
+    <!-- Buttons -->
+    <Button text="Search" fx:id="searchBtn" layoutX="370" layoutY="45" prefWidth="80"/>
+    <Button text="Refresh" fx:id="refreshBtn" layoutX="460" layoutY="45" prefWidth="80"/>
+
+    <!-- Table to show shipment details -->
+    <TableView fx:id="shipmentTable" layoutX="50" layoutY="100" prefWidth="500" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="colShipmentId" text="Shipment ID" prefWidth="100"/>
+            <TableColumn fx:id="colStatus" text="Status" prefWidth="150"/>
+            <TableColumn fx:id="colLocation" text="Current Location" prefWidth="150"/>
+            <TableColumn fx:id="colETA" text="ETA" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

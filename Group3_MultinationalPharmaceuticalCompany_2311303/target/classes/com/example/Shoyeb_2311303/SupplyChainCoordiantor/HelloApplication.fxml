@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Shoyeb_2311303.HelloApplicationController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <TextField fx:id="inputField" layoutX="180" layoutY="100" prefWidth="240"/>
+        <Button fx:id="clickButton" text="Click Me" layoutX="250" layoutY="150" onAction="#handleClick"/>
+        <Label fx:id="outputLabel" text="Output will appear here" layoutX="220" layoutY="200"/>
+    </children>
+
+</AnchorPane>

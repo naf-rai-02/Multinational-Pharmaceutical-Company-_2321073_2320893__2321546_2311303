@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Shoyeb_2311303.ClinicalTrialCoordinator.ManageSafetyReportingController"
+            prefWidth="800" prefHeight="600">
+
+    <!-- UID Input -->
+    <Label layoutX="20" layoutY="20" text="Enter UID:" />
+    <TextField fx:id="uidField" layoutX="100" layoutY="16" prefWidth="200" />
+
+    <!-- Access Safety Monitoring Module -->
+    <Button fx:id="accessModuleButton" layoutX="320" layoutY="15" text="Access Safety Module" />
+
+    <!-- TableView for AE/SAE Records -->
+    <TableView fx:id="aeTable" layoutX="20" layoutY="60" prefWidth="760" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="aeIdColumn" text="AE/SAE ID" prefWidth="100" />
+            <TableColumn fx:id="siteColumn" text="Site" prefWidth="150" />
+            <TableColumn fx:id="descriptionColumn" text="Description" prefWidth="250" />
+            <TableColumn fx:id="severityColumn" text="Severity" prefWidth="100" />
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="150" />
+        </columns>
+    </TableView>
+
+    <!-- Details & Documents -->
+    <Label layoutX="20" layoutY="330" text="Update Details / Attach Document:" />
+    <TextArea fx:id="detailsArea" layoutX="20" layoutY="360" prefWidth="560" prefHeight="100" wrapText="true" />
+    <Button fx:id="attachDocButton" layoutX="600" layoutY="360" text="Attach Document" />
+
+    <!-- Submit Report -->
+    <Button fx:id="submitReportButton" layoutX="600" layoutY="420" text="Submit Report" />
+
+    <!-- Status / Logs -->
+    <TextArea fx:id="statusArea" layoutX="20" layoutY="480" prefWidth="760" prefHeight="100" editable="false" wrapText="true" />
+
+</AnchorPane>

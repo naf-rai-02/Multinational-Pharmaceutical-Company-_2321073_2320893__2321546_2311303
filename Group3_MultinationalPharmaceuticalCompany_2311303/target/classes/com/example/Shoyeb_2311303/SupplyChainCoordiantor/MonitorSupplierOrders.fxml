@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Shoyeb_2311303.MonitorSupplierOrdersController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+
+        <Label text="Monitor Supplier Orders"
+               layoutX="200" layoutY="20"
+               style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <TableView fx:id="orderTable"
+                   layoutX="50" layoutY="70"
+                   prefHeight="250" prefWidth="500">
+
+            <columns>
+                <TableColumn text="Order ID" prefWidth="120"/>
+                <TableColumn text="Supplier" prefWidth="150"/>
+                <TableColumn text="Quantity" prefWidth="100"/>
+                <TableColumn text="Status" prefWidth="130"/>
+            </columns>
+        </TableView>
+
+        <Button fx:id="refreshBtn"
+                text="Refresh"
+                layoutX="150" layoutY="340"
+                prefWidth="100" />
+
+        <Button fx:id="approveBtn"
+                text="Approve"
+                layoutX="260" layoutY="340"
+                prefWidth="100" />
+
+        <Button fx:id="rejectBtn"
+                text="Reject"
+                layoutX="370" layoutY="340"
+                prefWidth="100" />
+
+    </children>
+
+</AnchorPane>

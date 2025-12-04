@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.Shoyeb_2311303.ClinicalTrialCoordinator.ManageStudyProtocolsController"
+            prefWidth="600" prefHeight="500">
+
+    <VBox fx:id="mainVBox" spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0"
+          AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0">
+
+        <!-- Login Section -->
+        <HBox spacing="10.0">
+            <Label text="User ID:"/>
+            <TextField fx:id="uidField" promptText="Enter UID" HBox.hgrow="ALWAYS"/>
+            <Button text="Login" fx:id="loginButton"/>
+        </HBox>
+
+        <Separator/>
+
+        <!-- Protocol List Section -->
+        <Label text="Protocol List"/>
+        <TableView fx:id="protocolsTable" prefHeight="200.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="protocolNameColumn" text="Protocol Name" prefWidth="250.0"/>
+                <TableColumn fx:id="statusColumn" text="Status" prefWidth="150.0"/>
+            </columns>
+        </TableView>
+
+        <Separator/>
+
+        <!-- Protocol Details Section -->
+        <Label text="Protocol Details"/>
+        <TextArea fx:id="protocolDetailsArea" prefHeight="100.0" promptText="Update details / add amendments"/>
+
+        <!-- Buttons Section -->
+        <HBox spacing="10.0">
+            <Button text="Attach Document" fx:id="attachDocButton"/>
+            <Button text="Submit for Approval" fx:id="submitButton"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.Shoyeb_2311303.ClinicalTrialCoordinator.MonitorTrialProgressDigitalDataControlclass"
+            prefWidth="600.0" prefHeight="400.0">
+
+    <!-- Main VBox to hold all content -->
+    <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+
+        <!-- Event 1: Open Trial Progress Monitoring Module -->
+        <HBox spacing="10">
+            <Label text="Trial UID:"/>
+            <TextField fx:id="uidField" promptText="Enter Trial UID"/>
+            <Button fx:id="openTrialButton" text="Open Trial Progress"/>
+        </HBox>
+
+        <!-- Event 2: Dashboards -->
+        <TitledPane text="Dashboards" expanded="true">
+            <VBox spacing="5">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <Button fx:id="enrollmentRateButton" text="View Enrollment Rate"/>
+                <Button fx:id="visitCompletionButton" text="View Visit Completion"/>
+                <Button fx:id="dropoutsButton" text="View Dropouts"/>
+                <Button fx:id="deviationsButton" text="View Deviations"/>
+            </VBox>
+        </TitledPane>
+
+        <!-- Event 3: EDC Logs -->
+        <TitledPane text="EDC Logs" expanded="true">
+            <VBox spacing="5">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <TableView fx:id="edcLogsTable" prefHeight="150">
+                    <columns>
+                        <TableColumn fx:id="logIdColumn" text="Log ID"/>
+                        <TableColumn fx:id="dateColumn" text="Date"/>
+                        <TableColumn fx:id="statusColumn" text="Status"/>
+                        <TableColumn fx:id="commentsColumn" text="Comments"/>
+                    </columns>
+                </TableView>
+                <Button fx:id="reviewLogsButton" text="Review EDC Logs"/>
+            </VBox>
+        </TitledPane>
+
+        <!-- Event 4: Generate Progress Reports & Alerts -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Button fx:id="generateReportButton" text="Generate Progress Report"/>
+            <Button fx:id="sendAlertsButton" text="Send Alerts to Sites"/>
+        </HBox>
+
+        <!-- Optional: Status/Logs TextArea -->
+        <TextArea fx:id="statusArea" promptText="System Messages / Status" prefHeight="80" editable="false"/>
+    </VBox>
+
+</AnchorPane>
